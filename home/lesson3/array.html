@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const arr = [1,2,3,4,5];
+        const arr1 = new Array();
+
+        const user = ['Ivan', 'M', 25];
+        const user1 = [30, 'Petr', 'M'];
+
+        function getUserInfo(_user){
+            console.log('name: ', _user[0]);
+            console.log('gender: ', _user[1]);
+            console.log('age: ', _user[2]);
+        }
+
+        // getUserInfo(user);
+        // console.log('=======')
+        // getUserInfo(user1);
+
+
+        const obj = {};
+        const obj1 = new Object;
+
+        const user2 = {
+            name: 'Sidr',
+            age: 35,
+            gender: 'M'
+        }
+
+        const user4 = {
+            age: 40,
+            name: 'Svetlana',
+            gender: 'W',
+            aaa: 5,
+            bbb: 10,
+        }
+
+        user4.age
+
+
+
+
+        const gender = 'gender';
+
+        function getUserInfoObj(_user){
+            
+            for(let key in _user){
+                // console.log("-----key", _user[key]);
+            }
+
+        }
+        getUserInfoObj(user4);
+        // getUserInfoObj(user4);
+
+
+        const beatles= {
+            name : 'Beatles',
+            members : [ 'McCartney', 'Lennon', 'Harrison', 'Starr' ],
+            albums: [
+                { name : 'Please Please Me', year : 1963 },
+                { name : 'With The Beatles', year : 1963 },
+                { name : "A Hard Day's Night", year : 1964 }
+            ]
+        };
+
+        for(let k in beatles){
+            if(k === 'name'){
+                console.log(beatles[k])
+            }
+            if(k === 'members'){
+                for(let i=0; i<beatles[k].length; i++){
+                    console.log(beatles[k][i])
+                }
+            } 
+            if(k === 'albums'){
+                for(let j=0; j<beatles[k].length; j++){
+                    for(let item in beatles[k][j]){
+                        console.log(beatles[k][j][item])
+                    }
+                }
+            }
+        }
+
+
+       
+    </script>
+</body>
+</html>
