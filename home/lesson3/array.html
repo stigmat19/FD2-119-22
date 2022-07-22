@@ -74,12 +74,12 @@
             if(k === 'name'){
                 console.log(beatles[k])
             }
-            if(k === 'members'){
+            else if(k === 'members'){
                 for(let i=0; i<beatles[k].length; i++){
                     console.log(beatles[k][i])
                 }
             } 
-            if(k === 'albums'){
+            else{
                 for(let j=0; j<beatles[k].length; j++){
                     for(let item in beatles[k][j]){
                         console.log(beatles[k][j][item])
