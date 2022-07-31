@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    class Transport {
+        constructor(count) {
+            this.wheels = count;
+
+            this.start = function (){
+                console.log('start')
+            }
+        }
+    }
+
+    class Car extends Transport{
+        constructor(brand, model, count) {
+            super(count);
+            this.carBrand = brand;
+            this.carModel = model;
+        }
+    }
+    
+    class Plane extends Transport{
+        constructor(brand, model) {
+            super();
+            this.planeBrand = brand;
+            this.planeModel = model
+        }
+    }
+
+
+
+    const bmw = new Car('bmw', 'x5', 4);
+    const truck = new Car('Volvo', 'FH16', 8);
+    const airplane = new Plane('tu', '755');
+
+</script>
+
+</body>
+</html>
