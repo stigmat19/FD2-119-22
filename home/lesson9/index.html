@@ -18,9 +18,14 @@
       }
 
 
-      function run(){
+      function blabla(num1, num2){
+        console.log(num1);
+        console.log(num1);
         console.log(this.name + " is run");
       }
+
+     
+
 
 
       function User(argumentName){
@@ -31,8 +36,53 @@
           }
       }
 
-      const Ivan = new User('Ivan')
-      Ivan.name
+      const Ivan = new User('Ivan');
+
+
+    function CarC(carNum) {
+        this.num=carNum; 
+
+        var wheels=4; 
+
+        var beep = function() { 
+            console.log('num:'+this.num+' wheels:'+wheels+' beeeeep!');
+        }
+
+        this.getBeep = function(){
+            beep.call(this)
+        }
+    }
+
+    blabla.call(obj, 10, 20)
+    const bmw = new CarC('1111AI5')
+
+    function CarD(carNum) {
+  // спасаем this и упрощаем себе жизнь
+  
+  this.num=carNum; // публичное свойство - элемент хэша this/self
+
+  this.maxSpeed=160; // публичное свойство - элемент хэша this/self
+
+  var wheels=4; // приватное свойство - локальная переменная
+
+  function getMaxSpeed() { // приватный метод - локальная функция
+    return this.maxSpeed; // и она может обратиться к публичному свойству
+  }
+
+  this.beep=function() { // публичный метод - элемент хэша this/self
+    console.log(
+        'num:'+this.num
+      +' wheels:'+wheels
+      +' maxspeed:'+getMaxSpeed.call(this)
+      +' beeeeep!');
+  }
+}
+
+const test = new CarD('1111AI5')
+
+
+
+
     </script>
     
 </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="el" title="hello" onclick="">++++<span>hello</span>+++<em>world</em>+++</div>
+   
+
+   
+    <form action="http://fe.it-academy.by/TestForm.php" name="bbbb">
+        <input type="text">
+
+        <select name="test[]" multiple size="1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <button>send</button>
+    </form>
+    
+    <button id="createP" onclick="createP()">createP</button>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <hr>
+
+    <ul>
+    
+    
+    <script>
+        const form = document.forms.bbbb;
+        const elem = form.elements[0];
+        const ul = document.querySelector('ul');
+        const el = document.getElementById('el');
+        const span = document.querySelector('#el span');
+
+        const createP = () => {
+            const tagP = document.createElement('p');
+            const tagPText = document.createTextNode('test');
+            tagP.appendChild(tagPText);
+            el.replaceChild(tagP, span);
+        }
+
+       
+
+        
+        
+    </script>
+</body>
+</html>

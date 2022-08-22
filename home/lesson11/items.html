@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="firstname" value="hello"> <br>
+    <input type="number" name="age" value="25"> 
+    <button onclick="addItem()">add</button>
+
+    <button onclick="render()">render</button>
+
+
+    <div id="app"></div>
+    <script>
+        const items = []
+        
+        const addItem = () => {
+            const firstname = document.querySelector('[name=firstname]').value
+            const age = document.querySelector('[name=age]').value
+
+            const obj = {
+                firstname,
+                age
+            }
+
+            items.push(obj)
+        }
+        
+
+        const render = () => {
+            const htmlText = items.reduce((acc, item) => {
+                return `${acc} <div class="card" style="width: 18rem;">
+                    <img src="${item.firstname}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        
+                    </div>
+                </div>`
+            },'')
+ 
+            const app = document.getElementById('app');
+            app.innerHTML = htmlText
+        }
+
+    </script>
+    
+</body>
+</html>
