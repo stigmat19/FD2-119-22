@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id='name'>
+    <input type="checkbox" id="isAlco">
+    <button id="addDrink">add</button>
+   
+    <script>
+        class Drink{
+            constructor(){
+                this.drinks = [];
+            }
+
+            add = (name, isAlco) =>{
+                this.drinks.push({
+                    name, 
+                    isAlco
+                })
+            }
+
+
+        }
+
+        const addDrink = document.getElementById('addDrink');
+
+        const testDrink = new Drink();
+
+        addDrink.addEventListener('click', () => {
+            const name = prompt('name');
+            const isAlco = confirm('isAlco');
+
+           
+
+            testDrink.add(name, isAlco);
+        })
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="javascript: var a = 5"></a>
+    
+
+    <script>
+        // es5
+        // function Car(brand, wheels, body, engine){
+        //     this.brand = brand;
+        //     this.wheels = wheels;
+        //     this.body = body;
+        //     this.engine = engine;
+
+        //     this.run = function(){
+        //         console.log(`${this.brand} is run`)           
+        //     }
+
+        //     this.start = function(){
+        //         console.log(`${this.brand} is start`)           
+        //     }
+
+        //     this.stop = function(){
+        //         console.log(`${this.brand} is stop`)           
+        //     }
+        // }
+
+        class Test{
+            constructor(){
+                this.name = 'hello'
+            }
+
+            testMethod() {
+                console.log('sdsdsdsd')
+            }
+        }
+
+        class Car extends Test{
+            constructor(brand, wheels, body, engine){
+                super();
+                this.brand = brand;
+                this.wheels = wheels;
+                this.body = body;
+                this.engine = engine;
+            }
+
+            #hello = 'test'
+
+            run (){
+                console.log(`${this.brand} is run`)           
+            }
+
+            start (){
+                console.log(`${this.brand} is start`)           
+            }
+
+            stop (){
+                console.log(`${this.brand} is stop`)           
+            }
+
+            hello(){
+                console.log(this.name)
+            }
+        }
+
+
+        const bmw = new Car('bmw', 4, 'cabriolete', 'diesel');
+
+
+        //example
+        function test(num1,num2){
+            console.log(num1+num2)
+        }
+
+        
+
+        test(10,20);
+        test('hello', 'world');
+
+        
+        function HTMLElement(){
+            this.type = 'div';
+            this.style = {
+                bakgroungColor: '',
+            }
+        }
+
+        
+        function getUserData(age, name) {
+            if(typeof age === 'number'){
+                return `${name} is ${age}`
+            } 
+                return true
+            
+        }
+
+        '12345,4567,23433,656575'
+
+       
+
+        getUserData(30, 'Ivan')
+        getUserData('30', 10)
+
+
+    </script>
+</body>
+</html>

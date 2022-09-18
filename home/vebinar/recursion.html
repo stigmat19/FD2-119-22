@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+  function fact2(n) {
+    if ( n<=1 ) /* условие останова рекурсии */
+      return 1;
+    return n*fact2(n-1); /* рекурсия */
+  }
+  console.log( fact2(2) );
+
+
+</script>
+
+</body>
+</html>

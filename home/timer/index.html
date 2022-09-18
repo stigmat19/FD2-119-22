@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         #app{
+             width: 50px;
+             height: 50px;
+             background-color: red;
+         }
+         #app1{
+             width: 50px;
+             height: 50px;
+             background-color: blue;
+         }
+         p::selection{
+             background-color: black;
+             color: chartreuse;
+         }
+     </style>
+</head>
+<body>
+    <div id="app"></div>
+    <div id="app1"></div>
+    <button id="stop">stop</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem reiciendis ducimus deleniti dignissimos, praesentium repellendus odio labore. Fuga eaque ducimus fugit sequi culpa provident sit! Architecto nam ipsum quidem repellendus!\</p>
+
+    <script>
+
+        // const func = (...rest) => {
+        //     console.log('is timer a', rest[0]);
+        // }
+
+        // const timer = setTimeout(func, 3000, 'one');
+        // const timer2 = setTimeout(func, 5000, 'two');
+        // clearTimeout(timer)
+
+
+        // let x = 0;
+
+        // const timer3 = setInterval(() => {
+        //     document.getElementById('app').style.marginLeft = `${x}px`
+        //     x++;
+        // }, 16);
+
+        // =====================
+
+        
+
+        // const run = () => {
+        //     document.getElementById('app1').style.marginLeft = `${x}px`
+        //     x++;
+        //     requestAnimationFrame(run)
+        // }
+
+        // run()
+
+       
+
+        // const stop = document.getElementById('stop');
+
+        // stop.addEventListener('click',() => {
+        //     clearInterval(timer3);
+        //     clearInterval(timer4);
+        // })
+
+
+        // ========
+        function f(arg) {
+            setTimeout( () => { 
+                console.log(arg); 
+                setTimeout(() => {
+                    f(7)
+                }, 3000);
+            } ,3000);
+        }
+
+        f(5);
+
+    </script>
+    
+</body>
+</html>

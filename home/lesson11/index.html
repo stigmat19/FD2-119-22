@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .linkStyle{
+            font-size: 24px;
+            font-weight: bold;
+            border: 1px solid red;
+        }
+
+        .active{
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+
+    
+    
+    <div id="app">hello</div>
+
+    <p class="p" id="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam, iste ducimus error vero, sint nesciunt voluptates voluptate, placeat dolores id doloremque. Aliquam aspernatur optio quaerat vel, magnam officia fuga.</p>
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam, iste ducimus error vero, sint nesciunt voluptates voluptate, placeat dolores id doloremque. Aliquam aspernatur optio quaerat vel, magnam officia fuga.</p>
+    <p class="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt ipsam, iste ducimus error vero, sint nesciunt voluptates voluptate, placeat dolores id doloremque. Aliquam aspernatur optio quaerat vel, magnam officia fuga.</p>
+
+    <a href="http://127.0.0.1:5500/home/lesson11/index.html">index</a>  <br>
+    <a href="http://127.0.0.1:5500/home/lesson10/index.html">index</a>
+
+    <script>
+        const app = document.getElementById('app');
+
+        app.style.color = "blue";
+
+
+        const tagsP = document.getElementsByClassName('p');
+
+        for(let tag of tagsP){
+            tag.style.color = 'red' 
+        }
+
+        const myClassName = 'linkStyle ';
+
+        const link = document.querySelector('a:nth-child(5)');
+        link.className = myClassName
+
+        link.className += 'active' 
+        
+        
+
+    </script>
+</body>
+</html>

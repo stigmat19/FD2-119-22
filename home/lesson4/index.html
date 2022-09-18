@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hw1</title>
+</head>
+
+<body>
+    <script>
+        let lastName;
+        do {
+            lastName = prompt('Какая у вас фамилия?');
+        } while (lastName === '' || false);
+        let firstName;
+        do {
+            firstName = prompt('Какое у вас имя?');
+        } while (firstName === '' || false);
+
+        let fatherName;
+        do {
+            fatherName = prompt('Какое у вас отчество?');
+        } while (fatherName === '' || false);
+
+        let age;
+        do {
+            age = prompt("Ваш возраст в годах?");
+        } while (age <= 0 || false);
+        let gender = confirm('Ваш пол мужской?');
+        if (gender == true) {
+            message = ' мужской';
+        } else {
+            message = ' женский';
+        }
+        let pension = (age > 62 && gender === 'мужской') ? ' да' : ' нет';
+        pension = (age < 57 && gender === 'женский') ? ' да' : ' нет';
+
+
+        const pension = gender === 'мужской' 
+            ?
+                age > 62 ? 'Yes' : 'No'
+            :  
+                age > 57 ? 'Yes' : 'No'
+
+        
+
+        
+     /*   if (age > 57) {
+        } else if (gender = 'женский') {
+        } else {
+            ' да';
+        }
+        if (age < 57) {
+        } else if (gender = 'женский') {
+        } else {
+            ' нет';
+        }
+        */
+
+
+        alert('Ваше ФИО: ' + " " + lastName + " " + firstName + " " + fatherName + '\nВаш возраст в годах: ' + age + '\nВаш возраст в днях: ' + age * 365 + '\nЧерез пять лет вам будет: ' + (+age + 5) + '\nВаш пол:' + message + '\nВы на пенсии:' + pension);
+    </script>
+</body>
+
+</html>

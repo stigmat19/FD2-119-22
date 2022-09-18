@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+
+        // var obj = {
+        //     name: "sdsds",
+        //     age: 25
+        // }
+
+        // var name = obj.name;
+        // var age = obj.age;
+
+        const obj1 = {
+            name: 'dkfhd',
+            age: 30
+        }
+        
+        function getName(name){
+            const obj2 = {
+                name,
+            }
+
+
+            console.log(obj2)
+        }
+
+        getName('dskjhfuif')
+
+
+        const { name, age } = obj1;
+        
+        const beatles= {
+            name : 'Beatles',
+            members : [ 'McCartney', 'Lennon', 'Harrison', 'Starr' ],
+            albums: {
+                test1: {
+                    test2: {
+                        test3: 'test'
+                    }
+                }
+            }
+        };
+
+        const { albums: 
+                    { test1: 
+                        { test2: 
+                                {test3}
+                        }
+                    }
+               } = beatles
+
+
+               function test (x, y, ...other){
+                   console.log("rest", other);
+               }
+
+
+               test(1,2,3,4,5,6)
+
+
+    </script>
+    
+</body>
+</html>

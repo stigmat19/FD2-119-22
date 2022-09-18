@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul id="cards-listMobile"></ul>
+
+<script>
+
+    var cardsMobile = [
+        {
+            id: 0,
+            title: 'Пихта Нордмана (в кадках)',
+            rating: '4.0',
+            size: '80-100 см',
+            isLike: false,
+            price: '125,52 руб.'
+        },
+        {
+            id: 1,
+            title: 'Пихта Нордмана (срезанная)',
+            imgURL: 'img/TreeMob02.png',
+            rating: '4.2',
+            size: '100-125 см',
+            isLike: true,
+            price: '55,60 руб.'
+        },
+        {
+            id: 2,
+            title: 'Пихта Нордмана (в кадках)',
+            imgURL: 'img/TreeMob03.png',
+            rating: '4.0',
+            size: '80-100 см',
+            isLike: false,
+            price: '125,52 руб.'
+        },
+        {
+            id: 3,
+            title: 'Пихта Нордмана (в кадках)',
+            imgURL: 'img/TreeMob04.png',
+            rating: '4.0',
+            size: '80-100 см',
+            isLike: true,
+            price: '125,52 руб.'
+        },
+        {
+            id: 4,
+            title: 'Пихта Нордмана (в кадках)',
+            imgURL: 'img/TreeMob05.png',
+            rating: '4.0',
+            size: '80-100 см',
+            isLike: false,
+            price: '125,52 руб.'
+        },
+    ]
+
+
+    var listMobile = document.getElementById('cards-listMobile');
+
+    const htmlElems = cardsMobile.reduce((r, v) => {
+        return `${r} <li>
+            <h3 class="title">${v.title}</h3>
+            <p class="size">${v.size}</p>
+            <h2 class="price">${v.price}</h2>
+            <div class="like ${v.isLike?"active":null}"></div>
+          </li>`
+    },'');
+
+    listMobile.addEventListener('click', ()=>{})
+
+
+
+    listMobile.innerHTML = htmlElems;
+
+
+</script>
+
+</body>
+</html>

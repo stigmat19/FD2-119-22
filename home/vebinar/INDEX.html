@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<SCRIPT>
+
+
+    function blabla(){
+        console.log('blabla1111')
+    }
+
+    window.ttt = function (){
+        console.log(this)
+    }
+
+    window = {
+        ttt: function () {
+            console.log(this)
+        }
+    }
+
+    ttt()
+
+
+    var a = 5
+
+
+
+    const func1 = {
+        name: function (){
+            console.log(this)
+        }
+    }
+
+    func1.name()
+
+
+    function testApply() {
+        console.log("-----1", this.b);
+    }
+
+    const obj = {
+        a: 5,
+        b: 10
+    }
+
+
+    testApply.apply(obj);
+
+
+</SCRIPT>
+
+</body>
+</html>
