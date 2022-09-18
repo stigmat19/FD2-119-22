@@ -30,42 +30,46 @@
 
     <div id="two"></div>
 
-
+  
     <script>
+const two = document.getElementById('two');
+window.onhashchange = () => {
+    two.innerHTML+=' test';
+}
 
-        const one = document.getElementById('one');
-        const two = document.getElementById('two');
+        // const one = document.getElementById('one');
+        
 
-        one.addEventListener('dragstart', (e) => {
-            // console.log('dragstart event target: ', e.target);
-        })
+        // one.addEventListener('dragstart', (e) => {
+        //     // console.log('dragstart event target: ', e.target);
+        // })
 
-        one.addEventListener('drag', (e) => {
-            // console.log('drag event target: ', e.target);
-        })
+        // one.addEventListener('drag', (e) => {
+        //     // console.log('drag event target: ', e.target);
+        // })
 
-        one.addEventListener('dragend', (e) => {
-            // console.log('dragend event target: ', e.target);
-        })
+        // one.addEventListener('dragend', (e) => {
+        //     // console.log('dragend event target: ', e.target);
+        // })
 
-        two.addEventListener('dragenter', (e) => {
-            console.warn('dragenter event', e.target)
-        })
+        // two.addEventListener('dragenter', (e) => {
+        //     console.warn('dragenter event', e.target)
+        // })
 
-        two.addEventListener('dragover', (e) => {
-        // prevent default to allow drop    
+        // two.addEventListener('dragover', (e) => {
+        // // prevent default to allow drop    
 
-            event.preventDefault();
-        })
+        //     event.preventDefault();
+        // })
 
-        two.addEventListener('dragleave', (e) => {
-            console.warn('dragleave event', e.target)
-        })
+        // two.addEventListener('dragleave', (e) => {
+        //     console.warn('dragleave event', e.target)
+        // })
 
-        two.addEventListener("drop", (event) => {
-           event.preventDefault();
-           console.log('test');
-        });
+        // two.addEventListener("drop", (event) => {
+        //    event.preventDefault();
+        //    console.log('test');
+        // });
 
 
     </script>
