@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: relative;
+            background: url(https://fe.it-academy.by/Examples/skrip.gif);
+        }
+        #ttt{
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div id="ttt"></div>
+    </div>
+    <button onclick="test()">click</button>
+
+
+    <script>
+    
+        
+
+        let x = 0;
+        let y = 0; 
+        const ttt = document.getElementById('ttt');
+
+        function test(){
+            x+=1;
+            y+=1;
+            ttt.style.transform = `translateZ(0) translateX(${x}px) translateY(${y}px)`;
+            // ttt.style.left = `${x}px`
+            // ttt.style.top = `${y}px`
+
+            return window.requestAnimationFrame(test);
+        }
+        
+    </script>
+    
+</body>
+</html>
