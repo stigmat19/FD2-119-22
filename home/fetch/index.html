@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    const url = 'https://fe.it-academy.by/AjaxStringStorage2.php';
+
+
+    let sp = new URLSearchParams();
+    sp.append('f', 'INSERT');
+    sp.append('n', 'Voytehovich_Yauheni_Alexandrsdsdsovich111sdsdsd11111');
+    sp.append('v', 'hello1111');
+
+    fetch(url, {
+        method: 'POST',
+        body: sp
+    }).then(res => res.json()).then(data => console.log('data', data))
+
+</script>
+
+</body>
+</html>
